@@ -1,0 +1,35 @@
+{
+  "name": "screeps-packrat",
+  "version": "1.0.0",
+  "description": "Lightning-fast and memory-efficient serialization of Screeps IDs, Coords, and RoomPositions",
+  "author": "Ben Bartlett",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencbartlett/Screeps-Packrat.git"
+  },
+  "homepage": "https://github.com/bencbartlett/ScreepsPackrat#readme",
+  "bugs": {
+    "url": "https://github.com/bencbartlett/ScreepsPackrat/issues"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "compile": "tsc -p .",
+    "clean": "rm -rf dist",
+    "test": "npm run clean && npm run build"
+  },
+  "license": "Unlicense",
+  "devDependencies": {
+    "@types/lodash": "^3.10.1",
+    "rollup": "^0.55.3",
+    "rollup-plugin-clean": "^1.0.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-screeps": "0.1.2",
+    "rollup-plugin-typescript2": "^0.11.0",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "@types/screeps": "^2.4.0"
+  }
+}
