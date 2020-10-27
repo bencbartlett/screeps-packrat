@@ -3,8 +3,8 @@
  * screeps-packrat
  * ---------------
  * Lightning-fast and memory-efficient serialization of Screeps IDs, Coords, and RoomPositions
- * Code written by Muon as part of Overmind Screeps AI.
- * Feel free to adapt as desired.
+ * Code written by Muon as part of Overmind Screeps AI. Feel free to adapt as desired.
+ * Package repository: https://github.com/bencbartlett/screeps-packrat
  * 
  * TypeScript version is available in the #share-thy-code channel on the Screeps Slack.
  *
@@ -32,6 +32,9 @@
  * | unpackCoordListAsPosList | unpacks string + room name into a list of pos  | 500ns/coord     |                    |
  * +--------------------------+------------------------------------------------+-----------------+--------------------+
  *
+ *  * Execution time measured on shard2 public servers and may vary on different machines or shards.
+ * ** Memory reduction for list functions is the asymptotic limit of lists containing many entries. Lower reductions
+ *    can be expected for smaller lists.
  */
 
 Object.defineProperty(exports, "__esModule", { value: true });
