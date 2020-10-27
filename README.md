@@ -32,5 +32,6 @@ To benchmark: PackratTests.run()
 +--------------------------+------------------------------------------------+-----------------+--------------------+
 ```
 
-*Execution time measured on shard2 public servers and may vary on different machines or shards.
-**Memory reduction for list functions is the asymptotic limit of lists containing many entries. Lower reductions can be expected for smaller lists.
+\*Execution time measured on shard2 public servers and may vary on different machines or shards.
+
+\**Memory reduction for list functions is the asymptotic limit of lists containing many entries. Lower reductions can be expected for smaller lists.
