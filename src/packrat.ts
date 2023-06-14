@@ -256,7 +256,7 @@ function packRoomName(roomName: string): string {
 		}
 
 		// y is 6 bits, x is 6 bits, quadrant is 2 bits
-		const num = (quadrant << 12 | (x << 6) | y) + 65;
+		const num = (quadrant << 14 | (x << 7) | y) + 65;
 		const char = String.fromCharCode(num);
 
 		PERMACACHE._packedRoomNames[roomName] = char;
@@ -272,9 +272,9 @@ function unpackRoomName(char: string): string {
 	if (PERMACACHE._unpackedRoomNames[char] === undefined) {
 		const num = char.charCodeAt(0) - 65;
 		const {q, x, y} = {
-			q: (num & 0b11000000111111) >>> 12,
-			x: (num & 0b00111111000000) >>> 6,
-			y: (num & 0b00000000111111),
+			q: (num & 0b1100000001111111) >>> 14,
+			x: (num & 0b0011111110000000) >>> 7,
+			y: (num & 0b0000000001111111),
 		};
 
 		let roomName: string;
